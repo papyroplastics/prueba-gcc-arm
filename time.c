@@ -1,4 +1,3 @@
-#include <bits/time.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -14,6 +13,7 @@ int main(void) {
 
     uint32_t max = 10000000;
     
+
     table_lookup(table, 0);
     table_lookup(table, 1);
     table_lookup(table, 2);
@@ -28,7 +28,8 @@ int main(void) {
     struct timespec tf;
     clock_gettime(CLOCK_REALTIME, &tf);
 
-    uint64_t t_loolup = tf.tv_nsec - ti.tv_nsec;
+    printf("lookup: %lu\n", tf.tv_nsec - ti.tv_nsec);
+
 
     table_lookup_fixed(table, 0);
     table_lookup_fixed(table, 1);
@@ -42,9 +43,7 @@ int main(void) {
     }
     clock_gettime(CLOCK_REALTIME, &tf);
 
-    uint64_t t_fixed = tf.tv_nsec - ti.tv_nsec;
+    printf("fixed: %lu\n", tf.tv_nsec - ti.tv_nsec);
 
-    printf("lookup: %lu", t_loolup);
-    printf("lookup: %lu", t_fixed);
     return 0;
 }
