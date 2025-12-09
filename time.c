@@ -11,7 +11,7 @@ int main(void) {
         table_insert(table, (uint32_t)rand(), (uint32_t)rand());
     }
 
-    uint32_t max = (uint32_t)-1;
+    uint32_t max = 10000000;
     
     table_lookup(table, 0);
     table_lookup(table, 1);
