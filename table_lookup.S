@@ -4,7 +4,7 @@
 //	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
 // GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-// options passed: -mlittle-endian -mabi=lp64 -O2 -fasynchronous-unwind-tables
+// options passed: -mlittle-endian -mabi=lp64 -O3 -fasynchronous-unwind-tables
 	.text
 	.align	2
 	.p2align 4,,11
